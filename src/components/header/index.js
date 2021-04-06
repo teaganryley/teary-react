@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { Menu, StyledHeader } from './styles';
 import logo from './assets/kensa_logo.png';
 
 const Header = () => (
-  <header>
+  <StyledHeader>
     <figure>
       <img
         src={logo}
@@ -12,7 +12,7 @@ const Header = () => (
       />
     </figure>
 
-    <nav>
+    <Menu>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -24,8 +24,8 @@ const Header = () => (
           <Link to="contact">Contact</Link>
         </li>
       </ul>
-    </nav>
-  </header>
+    </Menu>
+  </StyledHeader>
 );
 
 export default Header;
