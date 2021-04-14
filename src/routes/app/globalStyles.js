@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-const CssResetWrapper = styled.div`
+const GlobalStyles = createGlobalStyle`
   /* Box sizing rules */
   *,
   *::before,
@@ -45,4 +45,4 @@ const CssResetWrapper = styled.div`
   }
 `;
 
-export default CssResetWrapper;
+export default GlobalStyles;

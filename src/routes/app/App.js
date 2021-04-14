@@ -6,10 +6,12 @@ import {
 } from 'react-router-dom';
 
 import Header from '../../components/header';
+import GlobalStyles from './globalStyles';
 
 const App = () => (
   <Router>
     <div>
+      <GlobalStyles />
       <Header />
       <Switch>
         <Route path="/about">
