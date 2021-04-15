@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
+  align-items: center;
   background: purple;
   color: #000;
   figure {
     text-align: left;
     display: block;
-    padding: 1em;
   }
 `;
 
@@ -15,7 +15,7 @@ const Menu = styled('nav')`
     display: flex;
     flex-flow: row;
     list-style: none;
-    padding: 0;
+
     background: deepskyblue;
     a {
       text-align: center;
