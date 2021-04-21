@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import Header from '../../components/header';
+import Home from '../home';
 import GlobalStyles from './globalStyles';
 
 const App = () => (
@@ -23,10 +24,6 @@ const App = () => (
       </Switch>
     </div>
   </Router>
-);
-
-const Home = () => (
-  <h2>Home</h2>
 );
 
 const About = () => (
