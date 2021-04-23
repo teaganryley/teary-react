@@ -43,6 +43,17 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     display: block;
   }
+
+  html {
+    font-family: 'Space Mono', monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'BioRhyme', serif;
+  }
 `;
 
 export default GlobalStyles;
