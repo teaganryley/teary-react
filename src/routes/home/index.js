@@ -1,10 +1,10 @@
 import React from 'react';
-import MuiPlayer from '../../components/mui-player';
+import StyledButton from './styles';
 
 const Home = () => (
   <React.Fragment>
     <h2>Home</h2>
-    <MuiPlayer />
+    <StyledButton />
   </React.Fragment>
 );
 

@@ -4,30 +4,24 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-
+import { ThemeProvider } from 'styled-components';
+import { prairie } from '../../themes';
 import Header from '../../components/header';
 import Home from '../home';
 import GlobalStyles from './globalStyles';
 
 const App = () => (
   <Router>
-    <div>
+    <ThemeProvider theme={prairie}>
       <GlobalStyles />
       <Header />
       <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
         <Route path="/">
           <Home />
         </Route>
       </Switch>
-    </div>
+    </ThemeProvider>
   </Router>
-);
-
-const About = () => (
-  <h2>About</h2>
 );
 
 export default App;
