@@ -1,30 +1,20 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
+  background: ${props => props.theme.primary};
+  text: ${props => props.theme.text};
   align-items: center;
-  background: purple;
-  color: #000;
   figure {
     text-align: left;
     display: block;
   }
 `;
 
-const Menu = styled('nav')`
-  ul {
-    display: flex;
-    flex-flow: row;
-    list-style: none;
-
-    background: deepskyblue;
-    a {
-      text-align: center;
-      text-decoration: none;
-      display: block;
-      padding: 1em;
-      color: white;
-    }
-  }
+const StyledButton = styled.button`
+  width: 300px;
+  height: 100px;
+  color: ${props => props.theme.text};
+  background: ${props => props.theme.secondary};
 `;
 
-export { StyledHeader, Menu };
+export { StyledHeader, StyledButton };

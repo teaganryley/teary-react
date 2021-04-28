@@ -1,11 +1,10 @@
 import React from 'react';
-import StyledButton from './styles';
+import StyledHome from './styles';
 
 const Home = () => (
-  <React.Fragment>
+  <StyledHome>
     <h2>Home</h2>
-    <StyledButton />
-  </React.Fragment>
+  </StyledHome>
 );
 
 export default Home;

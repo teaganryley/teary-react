@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
-  width: 300px;
-  height: 100px;
-  color: ${props => props.theme.text};
+const StyledHome = styled.div`
   background: ${props => props.theme.primary};
+  color: ${props => props.theme.text};
 `;
 
-export default StyledButton;
+export default StyledHome;
