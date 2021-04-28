@@ -1,11 +1,10 @@
 import React from 'react';
-import MuiPlayer from '../../components/mui-player';
+import StyledHome from './styles';
 
 const Home = () => (
-  <React.Fragment>
+  <StyledHome>
     <h2>Home</h2>
-    <MuiPlayer />
-  </React.Fragment>
+  </StyledHome>
 );
 
 export default Home;

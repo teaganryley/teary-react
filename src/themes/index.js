@@ -1,22 +1,15 @@
 const ocean = {
-  color1: '',
-  color2: '',
-  color3: '',
-  text: '',
+  primary: '#122C34',
+  secondary: '#224870',
+  tertiary: '#44CFCB',
+  text: '#fff',
 };
 
 const prairie = {
-  color1: '',
-  color2: '',
-  color3: '',
-  text: '',
+  primary: '#EEBA0B',
+  secondary: '#C36F09',
+  tertiary: '#A63C06',
+  text: '#000',
 };
 
-const mars = {
-  color1: '',
-  color2: '',
-  color3: '',
-  text: '',
-};
-
-export { ocean, prairie, mars };
+export { ocean, prairie };

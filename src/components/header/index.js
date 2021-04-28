@@ -1,31 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, StyledHeader } from './styles';
-import logo from './assets/kensa_logo.png';
+import PropTypes from 'prop-types';
+// import SkipPreviousOutlinedIcon from '@material-ui/icons/SkipPreviousOutlined';
+// import SkipNextOutlinedIcon from '@material-ui/icons/SkipNextOutlined';
+import { StyledHeader, StyledButton } from './styles';
 
-const Header = () => (
+const Header = ({ onChangeTheme, currentTheme }) => (
   <StyledHeader className="row between-xs">
-    <figure className="col-xs">
-      <img
-        src={logo}
-        alt="logo"
-      />
-    </figure>
-
-    <Menu className="col-xs">
-      <ul className="row">
-        <li className="col-xs">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="col-xs">
-          <Link to="about">About</Link>
-        </li>
-        <li className="col-xs">
-          <Link to="contact">Contact</Link>
-        </li>
-      </ul>
-    </Menu>
+    <StyledButton
+      className="col-xs"
+      onClick={onChangeTheme}
+    >
+      {currentTheme}
+    </StyledButton>
   </StyledHeader>
 );
+
+Header.propTypes = {
+  onChangeTheme: PropTypes.func.isRequired,
+  currentTheme: PropTypes.string.isRequired,
+};
 
 export default Header;
