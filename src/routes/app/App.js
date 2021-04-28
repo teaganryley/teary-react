@@ -12,7 +12,7 @@ import GlobalStyles from './globalStyles';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState('ocean');
-  const toggleTheme = () => setCurrentTheme(currentTheme === 'ocean' ? 'praire' : 'ocean');
+  const toggleTheme = () => setCurrentTheme(currentTheme === 'ocean' ? 'prairie' : 'ocean');
 
   return (
     <ThemeProvider theme={themes[currentTheme]}>
