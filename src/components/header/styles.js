@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// import SkipPreviousOutlinedIcon from '@material-ui/icons/SkipPreviousOutlined';
+// import SkipNextOutlinedIcon from '@material-ui/icons/SkipNextOutlined';
 
 const StyledHeader = styled.header`
   background: ${props => props.theme.primary};
@@ -16,5 +18,15 @@ const StyledButton = styled.button`
   color: ${props => props.theme.text};
   background: ${props => props.theme.secondary};
 `;
+
+/*
+const SkipPrevious = styled()`
+
+`;
+
+const SkipNext = styled()`
+
+`;
+*/
 
 export { StyledHeader, StyledButton };

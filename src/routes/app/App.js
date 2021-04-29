@@ -5,20 +5,32 @@ import {
   Route,
 } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import * as themes from '../../themes';
+import themes from '../../themes';
 import Header from '../../components/header';
 import Home from '../home';
 import GlobalStyles from './globalStyles';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState('ocean');
-  const toggleTheme = () => setCurrentTheme(currentTheme === 'ocean' ? 'prairie' : 'ocean');
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const modulo = (n, m) => ((n % m) + m) % m;
+
+  const incrementTheme = () => {
+    setCurrentIndex(modulo(currentIndex + 1, themes.length));
+  };
+
+  const decrementTheme = () => {
+    setCurrentIndex(modulo(currentIndex - 1, themes.length));
+  };
 
   return (
-    <ThemeProvider theme={themes[currentTheme]}>
-      {console.log(themes[currentTheme])}
+    <ThemeProvider theme={themes[currentIndex]}>
       <GlobalStyles />
-      <Header onChangeTheme={toggleTheme} currentTheme={currentTheme} />
+      <Header
+        onIncrement={incrementTheme}
+        onDecrement={decrementTheme}
+        themeName={themes[currentIndex].name}
+      />
       <Router>
         <Switch>
           <Route path="/">
