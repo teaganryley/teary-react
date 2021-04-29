@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import SkipPreviousOutlinedIcon from '@material-ui/icons/SkipPreviousOutlined';
-// import SkipNextOutlinedIcon from '@material-ui/icons/SkipNextOutlined';
-import { StyledHeader, StyledButton } from './styles';
+import { StyledHeader, SkipPrevious, SkipNext } from './styles';
 
-const Header = ({ onChangeTheme, currentTheme }) => (
+const Header = ({ onIncrement, onDecrement, themeName }) => (
   <StyledHeader className="row between-xs">
-    <StyledButton
-      className="col-xs"
-      onClick={onChangeTheme}
-    >
-      {currentTheme}
-    </StyledButton>
+    <div className="col-xs">
+      <SkipPrevious onClick={onDecrement} />
+      {themeName}
+      <SkipNext onClick={onIncrement} />
+    </div>
   </StyledHeader>
 );
 
 Header.propTypes = {
-  onChangeTheme: PropTypes.func.isRequired,
-  currentTheme: PropTypes.string.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired,
+  themeName: PropTypes.string.isRequired,
 };
 
 export default Header;
