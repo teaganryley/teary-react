@@ -14,8 +14,18 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    font-family: 'Space Mono', monospace;
+    background: ${props => props.theme.primary};
+    padding: 1em;
+  }
+
+  body {
+    background: ${props => props.theme.secondary};
+    margin: 0;
+  }
+
   /* Remove default margin */
-  body,
   h1,
   h2,
   h3,
@@ -42,10 +52,6 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
     display: block;
-  }
-
-  html {
-    font-family: 'Space Mono', monospace;
   }
 
   h1,

@@ -7,6 +7,7 @@ import {
 import { ThemeProvider } from 'styled-components';
 import themes from '../../themes';
 import Header from '../../components/header';
+import ThemePlayer from '../../components/theme-player';
 import Home from '../home';
 import GlobalStyles from './globalStyles';
 
@@ -26,7 +27,8 @@ const App = () => {
   return (
     <ThemeProvider theme={themes[currentIndex]}>
       <GlobalStyles />
-      <Header
+      <Header />
+      <ThemePlayer
         onIncrement={incrementTheme}
         onDecrement={decrementTheme}
         themeName={themes[currentIndex].name}
