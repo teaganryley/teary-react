@@ -17,12 +17,13 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-family: 'Space Mono', monospace;
     background: ${props => props.theme.primary};
-    padding: 1em;
+    // padding: 1em;
   }
 
   body {
     background: ${props => props.theme.secondary};
     margin: 0;
+    // padding: 1em;
   }
 
   /* Remove default margin */
