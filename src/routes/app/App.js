@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import themes from '../../themes';
 import Header from '../../components/header';
 import ThemePlayer from '../../components/theme-player';
+import Footer from '../../components/footer';
 import Home from '../home';
 import GlobalStyles from './globalStyles';
 
@@ -42,6 +43,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </ThemeProvider>
   );
 };
