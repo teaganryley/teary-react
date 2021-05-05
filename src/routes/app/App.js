@@ -28,11 +28,13 @@ const App = () => {
     <ThemeProvider theme={themes[currentIndex]}>
       <GlobalStyles />
       <Header />
-      <ThemePlayer
-        onIncrement={incrementTheme}
-        onDecrement={decrementTheme}
-        themeName={themes[currentIndex].name}
-      />
+      <div className="row center-xs">
+        <ThemePlayer
+          onIncrement={incrementTheme}
+          onDecrement={decrementTheme}
+          themeName={themes[currentIndex].name}
+        />
+      </div>
       <Router>
         <Switch>
           <Route path="/">

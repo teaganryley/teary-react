@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyledPlayer, SkipPrevious, SkipNext } from './styles';
 
 const ThemePlayer = ({ onIncrement, onDecrement, themeName }) => (
-  <StyledPlayer className="row between-xs">
+  <StyledPlayer className="row center-xs">
     <div className="col-xs">
       <SkipPrevious onClick={onDecrement} />
     </div>
