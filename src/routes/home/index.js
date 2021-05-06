@@ -5,7 +5,9 @@ import ContactCard from '../../components/contact-card';
 const Home = () => (
   <StyledHome>
     <h2>Home</h2>
-    <ContactCard />
+    <div className="row center-xs">
+      <ContactCard className="col-xs" />
+    </div>
   </StyledHome>
 );
 
