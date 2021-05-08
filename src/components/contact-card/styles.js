@@ -5,9 +5,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const StyledCard = styled.div`
   width: 30%;
+  margin: 2% 0;
   color: ${props => props.theme.text};
-  outline: solid;
-  outline-color: ${props => props.theme.tertiary};
+  border: thin solid ${props => props.theme.tertiary};
 `;
 
 const LinkedIn = styled(LinkedInIcon)`

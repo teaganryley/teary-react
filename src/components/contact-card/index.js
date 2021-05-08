@@ -11,9 +11,27 @@ const ContactCard = () => (
       </div>
     </div>
     <div className="row center-xs">
-      <LinkedIn className="col-xs" />
-      <Mail className="col-xs" />
-      <GitHub className="col-xs" />
+      <a
+        className="col-xs"
+        href="https://www.linkedin.com/in/teagan-ryley/"
+        aria-label="LinkedIn"
+      >
+        <LinkedIn />
+      </a>
+      <a
+        className="col-xs"
+        href="mailto:teaganschultz@gmail.com"
+        aria-label="Mail"
+      >
+        <Mail />
+      </a>
+      <a
+        className="col-xs"
+        href="https://github.com/teaganryley"
+        aria-label="GitHub"
+      >
+        <GitHub />
+      </a>
     </div>
   </StyledCard>
 );

@@ -3,10 +3,9 @@ import SkipPreviousOutlinedIcon from '@material-ui/icons/SkipPreviousOutlined';
 import SkipNextOutlinedIcon from '@material-ui/icons/SkipNextOutlined';
 
 const StyledPlayer = styled.div`
-  outline: solid;
-  width: 300px;
+  width: 20%;
   color: ${props => props.theme.text};
-  outline-color: ${props => props.theme.tertiary};
+  border: thin solid ${props => props.theme.tertiary};
 `;
 
 const SkipPrevious = styled(SkipPreviousOutlinedIcon)`

@@ -17,7 +17,7 @@ const themes = [
     name: 'vidKid',
     primary: '#CADC9F',
     secondary: '#306230',
-    tertiary: '8bac0f',
+    tertiary: '#8bac0f',
     text: '#0f380f',
   },
 ];

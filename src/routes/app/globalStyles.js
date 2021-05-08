@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     background: ${props => props.theme.primary};
     // padding: 1em;
   }
@@ -58,8 +58,10 @@ const GlobalStyles = createGlobalStyle`
   h1,
   h2,
   h3,
-  h4 {
-    font-family: 'BioRhyme', serif;
+  h4,
+  h5,
+  h6 {
+    font-family: 'Space Mono', monospace;
   }
 `;
 
