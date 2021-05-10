@@ -1,38 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { useOutsideClick } from 'rooks';
 import {
   StyledHome, StyledButton,
 } from './styles';
 import ContactCard from '../../components/contact-card';
 
-/*
-  ideas:
-    1) user clicks anywhere outside of the contact card-> card closes
-*/
-
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const ref = useRef();
+
   const toggleOpen = () => setIsOpen(!isOpen);
 
-  let content;
+  const outsideCardClick = () => toggleOpen();
 
-  if (isOpen) {
-    content = <ContactCard className="col-xs" />;
-  } else {
-    content = (
-      <StyledButton
-        onClick={toggleOpen}
-        className="col-xs"
-      >
-        Open!
-      </StyledButton>
-    );
-  }
+  useOutsideClick(ref, outsideCardClick);
+
   return (
     <StyledHome>
       <h2>Home</h2>
       <div className="row center-xs">
-        {content}
+        {(isOpen)
+          ? <span ref={ref}><ContactCard className="col-xs" /></span>
+          : <StyledButton onClick={toggleOpen} className="col-xs">Open!</StyledButton>}
       </div>
     </StyledHome>
   );
